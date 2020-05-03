@@ -20,6 +20,14 @@ const server = http.createServer((req, res) => {
       res.write("success");
       res.end('');
     });
+  } else if(route == "/poweron") {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+
+    exec("echo 'on " + cecDeviceId + "' | cec-client -s -d 1").then(function() {
+      res.write("success");
+      res.end('');
+    });
   } else {
     res.statusCode = 400;
     res.end('');
