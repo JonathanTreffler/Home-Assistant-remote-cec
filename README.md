@@ -1,0 +1,1 @@
+Client for the hacs plugin remote-cec
