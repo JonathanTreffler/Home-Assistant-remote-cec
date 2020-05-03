@@ -10,7 +10,7 @@ const cecDeviceId = 0;
 
 const server = http.createServer((req, res) => {
   let urlParts = url.parse(req.url);
-  let route = routes[parts.pathname];
+  let route = urlParts.pathname;
 
   if(route == "/shutdown") {
     res.statusCode = 200;
