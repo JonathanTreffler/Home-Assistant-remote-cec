@@ -1,4 +1,2 @@
 apt update
-apt install -y cec-utils git node npm
-
-cd /
+apt install -y cec-utils node npm
