@@ -13,18 +13,22 @@ const server = http.createServer((req, res) => {
   let route = urlParts.pathname;
 
   if(route == "/shutdown") {
+    console.log("command recieved: shutdown");
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
 
     exec("echo 'standby " + cecDeviceId + "' | cec-client -s -d 1").then(function() {
+      console.log("command success: shutdown");
       res.write("success");
       res.end('');
     });
   } else if(route == "/poweron") {
+    console.log("command recieved: poweron");
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
 
     exec("echo 'on " + cecDeviceId + "' | cec-client -s -d 1").then(function() {
+      console.log("command success: poweron");
       res.write("success");
       res.end('');
     });
