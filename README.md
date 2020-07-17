@@ -53,7 +53,7 @@ rest_command:
 
 ## Troubleshooting
 - If nothing happens if you try to send a command:
-  1. Make sure the server is running
-  2. Make sure the server uses the right cecDeviceId (can be changed in the app.js file)(the cecDeviceId is in most cases 0)
+  - Make sure the server is running
+  - Make sure the server uses the right cecDeviceId (can be changed in the app.js file)(the cecDeviceId is in most cases 0)
 - The server doesn't start because something else is running on port 8080:
   - You can change the port of the web server in the app.js file (remember to also update the home assistant configuration)
