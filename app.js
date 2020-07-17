@@ -40,8 +40,8 @@ const server = http.createServer((req, res) => {
     .catch(function() {
       console.log("command failed: poweron");
     });
-  } else if(route == "/scan") {
-    exec("echo 'scan' | cec-client -d 1", (error, stdout, stderr) => {
+  } else if(route == "/commands") {
+    exec("echo h | cec-client -s -d 1", (error, stdout, stderr) => {
       res.write(stdout? stdout : stderr);
       res.end('');
     });
