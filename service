@@ -11,8 +11,7 @@
 
 case "$1" in
     start)
-        cd /hacs-remote-cec-client
-        bash start.sh &
+        bash /Home-Assistant-remote-cec/start.sh &
         ;;
 
     stop)
