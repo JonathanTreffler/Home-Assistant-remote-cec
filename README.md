@@ -19,7 +19,7 @@ cd /
 ```
 3. Run:
 ```
-git clone https://github.com/TessyPowder/Home-Assistant-remote-cec.git
+sudo git clone https://github.com/TessyPowder/Home-Assistant-remote-cec.git
 ```
 4. Run:
 ```
@@ -37,7 +37,7 @@ sudo ./install.sh
 8. Assign a static local IP Adress to your Raspberry (in most cases via the web interface of your router)
 9. Run:
 ```
-service HomeAssistantRemoteCEC start
+sudo service HomeAssistantRemoteCEC start
 ```
 
 The server will get started automatically after a reboot
