@@ -39,6 +39,10 @@ sudo ./install.sh
 ```
 sudo service HomeAssistantRemoteCEC start
 ```
+10. Test if the server is started by running:
+```
+sudo netstat -tulpn | grep 8080
+```
 
 The server will get started automatically after a reboot
 
