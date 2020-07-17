@@ -17,20 +17,28 @@ const server = http.createServer((req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
 
-    exec("echo 'standby " + cecDeviceId + "' | cec-client -s -d 1").then(function() {
+    exec("echo 'standby " + cecDeviceId + "' | cec-client -s -d 1")
+    .then(function() {
       console.log("command success: shutdown");
       res.write("success");
       res.end('');
+    })
+    .catch(function() {
+      console.log("command failed: shutdown");
     });
   } else if(route == "/poweron") {
     console.log("command recieved: poweron");
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
 
-    exec("echo 'on " + cecDeviceId + "' | cec-client -s -d 1").then(function() {
+    exec("echo 'on " + cecDeviceId + "' | cec-client -s -d 1")
+    .then(function() {
       console.log("command success: poweron");
       res.write("success");
       res.end('');
+    })
+    .catch(function() {
+      console.log("command failed: poweron");
     });
   } else {
     res.statusCode = 400;
