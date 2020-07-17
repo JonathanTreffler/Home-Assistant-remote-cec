@@ -4,7 +4,7 @@ With this Integration you can control a cec device (like a tv), that is not dire
 - Raspberry Pi 2 (not tested)
 - __Raspberry Pi 3__
 - Raspberry Pi 4 (not tested)
-- Raspberry Pi Zero (not tested)
+- __Raspberry Pi Zero__
 - *probably many more*
 
 ## Supported Server Operating Systems:
@@ -15,36 +15,30 @@ With this Integration you can control a cec device (like a tv), that is not dire
 1. Connect via SSH or open a Terminal
 2. Run:
 ```
-cd /
+$ cd /
+$ sudo git clone https://github.com/TessyPowder/Home-Assistant-remote-cec.git
+$ cd Home-Assistant-remote-cec
+$ sudo chmod +x ./install.sh
+$ sudo ./install.sh
 ```
-3. Run:
-```
-sudo git clone https://github.com/TessyPowder/Home-Assistant-remote-cec.git
-```
-4. Run:
-```
-cd Home-Assistant-remote-cec
-```
+3. Connect the Raspberry Pi to your cec compatible device via HDMI
+4. Assign a static local IP Adress to your Raspberry (in most cases via the web interface of your router)
 5. Run:
-```
-sudo chmod +x ./install.sh
-```
-6. Run:
-```
-sudo ./install.sh
-```
-7. Connect the Raspberry Pi to your cec compatible device via HDMI
-8. Assign a static local IP Adress to your Raspberry (in most cases via the web interface of your router)
-9. Run:
 ```
 sudo service HomeAssistantRemoteCEC start
 ```
-10. Test if the server is started by running:
+
+The server will get started automatically after a reboot
+
+
+You can test if the server is started by running:
 ```
 sudo netstat -tulpn | grep 8080
 ```
-
-The server will get started automatically after a reboot
+You can see the logs by running:
+```
+sudo systemctl status HomeAssistantRemoteCEC
+```
 
 ## Home Assistant Configuration
 Add the following to your HomeAssistant configuration.yaml and customize it to fit your setup:
