@@ -1,1 +1,1 @@
-nodejs app.js
+nodejs /Home-Assistant-remote-cec/app.js
