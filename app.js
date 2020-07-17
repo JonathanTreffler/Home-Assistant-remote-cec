@@ -40,6 +40,11 @@ const server = http.createServer((req, res) => {
     .catch(function() {
       console.log("command failed: poweron");
     });
+  } else if(route == "/scan") {
+    exec("echo 'scan' | cec-client -d 1", (error, stdout, stderr) => {
+      res.write(stdout? stdout : stderr);
+      res.end('');
+    });
   } else {
     console.log("recieved unknown command");
     res.statusCode = 400;
