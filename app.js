@@ -41,6 +41,7 @@ const server = http.createServer((req, res) => {
       console.log("command failed: poweron");
     });
   } else {
+    console.log("recieved unknown command");
     res.statusCode = 400;
     res.end('');
   }
