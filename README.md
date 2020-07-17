@@ -53,3 +53,20 @@ rest_command:
   2. Make sure the server uses the right cecDeviceId (can be changed in the app.js file)(the cecDeviceId is in most cases 0)
 - The server doesn't start because something else is running on port 8080:
   - You can change the port of the web server in the app.js file (remember to also update the home assistant configuration)
+
+## Autostart
+- Run:
+```
+sudo nano /etc/init.d/startServer
+```
+- Paste the following and insert the location of this repository (like "/hacs-remote-cec-client"):
+```
+#! /bin/sh
+cd RepositoryLocation 
+bash start.sh
+```
+- Save with CTL+O and Enter
+- Run:
+```
+sudo chmod 755 /etc/init.d/startServer
+```
