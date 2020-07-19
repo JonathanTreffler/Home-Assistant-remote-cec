@@ -58,3 +58,31 @@ rest_command:
   - Try a different HDMI Cable, not all cables or adapters (needed for the Pi Zero) are compatible with CEC
 - The server doesn't start because something else is running on port 8080:
   - You can change the port of the web server in the app.js file (remember to also update the home assistant configuration)
+
+## Compatible Devices:
+Many brands call CEC differently, but they should all be compatible:
+
+- T-Link (ITT)
+- EasyLink (Philips)
+- EZ-Sync (JVC)
+- Simplink (LG)
+- Digital Link HD (Loewe)
+- NetCommand for HDMI (Mitsubishi)
+- RIHD (Remote Interactivity over HDMI) (Onkyo)
+- Viera Link (Panasonic)
+- Kuro Link (Pioneer)
+- Anynet+ (Samsung)
+- Aquos Link (Sharp)
+- BRAVIA Sync (Sony)
+- Regza-Link (Toshiba)
+- TechniLink (Technisat)
+- CSTLink (Coolstream)
+- FUN-Link (Funai Electric)
+- Digi-Link (Grundig)
+
+## How does CEC work ?
+The raspberry communicates with a cec compatible device like a TV or DVD Player over HDMI.
+
+All Devices in this CEC "network" can communicate even if they are not directly connected via HDMI (e.g Raspberry sends a signal to the TV via HDMI, wich forwards it to the DVD Player).
+
+For more information just read the [wikipedia article](https://en.wikipedia.org/wiki/Consumer_Electronics_Control) :)
