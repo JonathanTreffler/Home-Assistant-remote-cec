@@ -16,7 +16,7 @@ With this Integration you can control a cec device (like a tv), that is not dire
 2. Run:
 ```
 $ cd /
-$ sudo git clone https://github.com/TessyPowder/Home-Assistant-remote-cec.git
+$ sudo git clone https://github.com/JonathanTreffler/Home-Assistant-remote-cec.git
 $ cd Home-Assistant-remote-cec
 $ sudo chmod +x ./install.sh
 $ sudo ./install.sh
