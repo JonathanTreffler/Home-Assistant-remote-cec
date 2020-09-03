@@ -1,3 +1,6 @@
+[![License](https://img.shields.io/github/license/JonathanTreffler/Home-Assistant-remote-cec)](https://github.com/JonathanTreffler/Home-Assistant-remote-cec/blob/master/LICENSE)
+![GitHub last commit](https://img.shields.io/github/last-commit/JonathanTreffler/Home-Assistant-remote-cec)
+
 With this Integration you can control a cec device (like a tv), that is not directly connected to your server with a raspberry, that acts as a cec "proxy"
 
 ## Supported Server Devices:
